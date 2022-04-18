@@ -1,6 +1,38 @@
-
-
 export const Header = () => {
+
+  const openBurgerMenu = () => {
+    const burger = document.querySelectorAll('.navbar-burger');
+    const menu = document.querySelectorAll('.navbar-menu');
+    if (burger.length && menu.length) {
+      for (let j = 0; j < menu.length; j++) {
+        menu[j].classList.toggle('hidden');
+      }
+    }
+  }
+
+  const closeBurgerMenu = () => {
+    const close = document.querySelectorAll('.navbar-close');
+    const backdrop = document.querySelectorAll('.navbar-backdrop');
+    const menu = document.querySelectorAll('.navbar-menu');
+
+    if (close.length) {
+      for (let j = 0; j < menu.length; j++) {
+        menu[j].classList.toggle('hidden');
+      }
+    }
+
+    if (backdrop.length) {
+      for (let i = 0; i < backdrop.length; i++) {
+        backdrop[i].addEventListener('click', function () {
+          for (let j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle('hidden');
+          }
+        });
+      }
+    }
+  }
+
+
   return (
     <>
       <body className="bg-blue-500">
@@ -13,7 +45,7 @@ export const Header = () => {
             </svg>
           </a>
           <div className="lg:hidden">
-            <button className="navbar-burger flex items-center text-blue-600 p-3">
+            <button className="navbar-burger flex items-center text-blue-600 p-3" onClick={openBurgerMenu}>
               <svg className="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <title>Mobile menu</title>
                 <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
@@ -63,7 +95,7 @@ export const Header = () => {
                   </path>
                 </svg>
               </a>
-              <button className="navbar-close">
+              <button className="navbar-close" onClick={closeBurgerMenu}>
                 <svg className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg"
                   fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
