@@ -35,7 +35,7 @@ export const Header = () => {
 
   return (
     <>
-      <nav className="relative px-4 py-4 flex justify-between items-center bg-white">
+      <nav className="relative px-4 py-4 flex justify-between items-center bg-white shadow ">
         <a className="text-3xl font-bold leading-none" href="/">
           <img className="h-10 ml-10" src="/logo192.png" alt="logo" />
         </a>
@@ -49,12 +49,14 @@ export const Header = () => {
         </div>
         <ul
           className="hidden absolute top-1/2 right-60 transform -translate-y-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-10">
-          <li><a className="text-sm text-gray-500 font-bold hover:text-blue-500" href="/">Home</a></li>
-          <li><a className="text-sm text-gray-500 font-bold hover:text-blue-500" href="/about">About Us</a></li>
-          <li><a className="text-sm text-gray-500 font-bold hover:text-blue-500" href="/services">Services</a></li>
-          <li><a className="text-sm text-gray-500 font-bold hover:text-blue-500" href="/contact">Contact</a></li>
+          <li><a className="text-sm text-gray-500 font-bold hover:text-blue-500" href="/">Inicio</a></li>
+          <li><a className="text-sm text-gray-500 font-bold hover:text-blue-500" href="/about">Servicios</a></li>
+          <li><a className="text-sm text-gray-500 font-bold hover:text-blue-500" href="/services">Whitepaper</a></li>
+          <li><a className="text-sm text-gray-500 font-bold hover:text-blue-500" href="/contact">Nosotros</a></li>
         </ul>
-        <a className="hidden lg:inline-block lg:ml-auto lg:mr-14 py-2 px-6 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-3xl transition duration-200" href="/login">Sign In</a>
+        <a className="hidden lg:inline-block lg:ml-auto lg:mr-14 py-2 px-6 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-3xl transition duration-200" href="/login">
+          Accede
+        </a>
       </nav>
       <div className="navbar-menu relative z-50 hidden">
         <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
@@ -75,26 +77,26 @@ export const Header = () => {
             <ul>
               <li className="mb-1">
                 <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                  href="/">Home</a>
+                  href="/">Inicio</a>
               </li>
               <li className="mb-1">
                 <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                  href="/">About Us</a>
+                  href="/">Servicios</a>
               </li>
               <li className="mb-1">
                 <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                  href="/">Services</a>
+                  href="/">Whitepaper</a>
               </li>
               <li className="mb-1">
                 <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                  href="/">Contact</a>
+                  href="/">Nosotros</a>
               </li>
             </ul>
           </div>
           <div className="mt-auto">
             <div className="pt-6">
               <a className="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
-                href="/">Sign in</a>
+                href="/">Accede</a>
             </div>
             <p className="my-4 text-xs text-center text-gray-400">
               <span>Copyright © 2022</span>
@@ -102,7 +104,6 @@ export const Header = () => {
           </div>
         </nav>
       </div>
-      <div className="w-100 border"></div>
     </>
   )
 }
